@@ -1,0 +1,11 @@
+<launch>
+	<param name="use_sim_time" value="true"/>
+	<rosparam file = "$(find robot_stars)/src/launch/task2.yaml" command = "load"/>
+	<node pkg="stage_ros" type="stageros" name="stageros" args="$(find robot_stars)/worlds/worldfile.world" output="screen"/>
+	<node pkg="robot_stars" type="task2.py"  name="robotmove" output="screen"/>
+	
+ 
+
+	
+
+</launch>
